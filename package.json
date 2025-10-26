@@ -1,0 +1,15 @@
+{
+  "name": "giveaway-api",
+  "version": "1.0.0",
+  "description": "Secure backend for Instagram Giveaway Picker using Apify API.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "cors": "^2.8.5"
+  }
+}
