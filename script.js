@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_BASE = "https://giveaway-api-production.up.railway.app"; // backend alan adın
+  const API_BASE = "https://giveawaypicker.online";
 
   const startBtn = document.getElementById("startBtn");
   const showWinnersBtn = document.getElementById("showWinnersBtn");
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // JSON fetch helper (JSON olmayan cevabı anlamlı hata yap)
   async function fetchJSON(url, options) {
     const res = await fetch(url, options);
     const text = await res.text();
@@ -47,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1) Start
   startBtn.addEventListener("click", async () => {
     const url = postUrlInput.value.trim();
-    const resultsLimit = Math.max(1, Math.min(500, Number(commentCountInput.value.trim()) || 5)); // 🔥
+    const resultsLimit = Math.max(1, Math.min(500, Number(commentCountInput.value.trim()) || 5));
 
     if (!url) return alert("Please enter a valid Instagram post URL.");
 
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     startBtn.textContent = "Starting...";
 
     try {
-      // Backend'e resultsLimit gönderiyoruz
       const { runId } = await fetchJSON(`${API_BASE}/start`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -65,12 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       sessionStorage.setItem("apify_run_id", runId);
 
-      // 30 sn progress
       await runProgressBar(30);
 
-      // Ek polling (max 60 sn): dataset oluştu mu ve istenen kadar kayıt var mı?
-      const maxExtraWaitMs = 60000;  // 60 sn
-      const pollIntervalMs = 2000;   // 2 sn
+      const maxExtraWaitMs = 60000;
+      const pollIntervalMs = 2000;
       const started = Date.now();
 
       let datasetId = null;
@@ -84,10 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const wJson = await fetchJSON(`${API_BASE}/winners/${datasetId}?limit=${resultsLimit}`, { method: "GET" });
           items = Array.isArray(wJson.items) ? wJson.items : [];
 
-          // 1) Hedefe ulaştıysak dur
           if (items.length >= resultsLimit) break;
-
-          // 2) Run bitti ve yine eksikse, daha fazlası gelmeyecek → dur
           if (["SUCCEEDED", "FAILED", "ABORTED"].includes(sJson.status)) break;
         }
         await sleep(pollIntervalMs);
@@ -115,12 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!datasetId) return alert("⚠️ No dataset found. Please start again.");
 
     try {
-      // Prefetched kullan
       let items = [];
       const cached = sessionStorage.getItem("apify_prefetched_items");
       if (cached) { try { items = JSON.parse(cached); } catch {} }
 
-      // Yoksa API'den çek
       if (!items || items.length === 0) {
         const j = await fetchJSON(`${API_BASE}/winners/${datasetId}?limit=${resultsLimit}`, { method: "GET" });
         items = j.items || [];
