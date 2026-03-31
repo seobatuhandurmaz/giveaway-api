@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Instagram Giveaway Picker | Random Comment Winner Tool</title>
+  <meta name="description" content="Run a free Instagram giveaway easily. Paste your post URL, set filters, and pick random winners instantly, no login, no app required." />
+  <link rel="canonical" href="https://giveawaypicker.online/" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRVPBJJB39"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RRVPBJJB39');
+  </script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo">🎁 InstaGiveawayPicker</div>
+    <nav>
+      <a href="#faq-section">FAQ</a>
+      <a href="#howto">How It Works</a>
+      <a href="mailto:support@giveawaypicker.online">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h1 class="title">Free Instagram Giveaway Picker</h1>
+    <p class="subtitle">
+      Run fair and engaging Instagram giveaways with our free comment picker. No login, no downloads, just paste your post URL and pick winners instantly.
+    </p>
+
+    <div class="form-container">
+      <label>Instagram Post URL</label>
+      <input id="postUrl" type="text" placeholder="https://www.instagram.com/reel/.../" />
+
+      <label>Words Include</label>
+      <input id="includeWords" type="text" placeholder="Enter words..." />
+
+      <label>Number of Comments</label>
+      <input id="commentCount" type="number" placeholder="5" />
+
+      <button id="startBtn" class="start-btn">Start Giveaway Picker</button>
+
+      <p class="note">
+        You can use this giveaway picker 1 time for free for each post that has up to 500 entries. Add prestige to your brand with the most trusted random winner picker.
+      </p>
+
+      <button id="showWinnersBtn" class="show-btn" style="display:none;">Show Winners</button>
+
+      <div id="progressContainer" class="progress-bar" style="display:none;">
+        <div id="progressFill"></div>
+      </div>
+
+      <div id="winnersContainer" class="winners"></div>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <section id="faq-section">
+      <h2>Frequently Asked Questions About Instagram Giveaways</h2>
+
+      <details open>
+        <summary>1. What is an Instagram Giveaway Picker?</summary>
+        <p>An Instagram Giveaway Picker randomly selects winners from post comments, perfect for fair and transparent giveaways.</p>
+      </details>
+
+      <details>
+        <summary>2. How do I run a giveaway on Instagram?</summary>
+        <p>Create a post with clear rules, ask users to comment, then paste your URL into our picker and choose random winners.</p>
+      </details>
+
+      <details>
+        <summary>3. Is this Instagram Giveaway Picker free?</summary>
+        <p>Yes. You can use our tool for free for up to 500 comments, no login or signup required.</p>
+      </details>
+
+      <details>
+        <summary>4. How does the giveaway picker work?</summary>
+        <p>The picker uses API powered comment data and selects random winners instantly and securely.</p>
+      </details>
+
+      <details>
+        <summary>5. Can I use the giveaway picker without login?</summary>
+        <p>Yes. Just paste a public Instagram post link. You never need to log in or share credentials.</p>
+      </details>
+
+      <details>
+        <summary>6. How to pick multiple winners on Instagram?</summary>
+        <p>Enter the number of comments you want in the "Number of Comments" field, and the picker will draw that many winners.</p>
+      </details>
+
+      <details>
+        <summary>7. What are Instagram giveaway rules?</summary>
+        <p>You must include a disclaimer that Instagram is not affiliated with your contest and clearly define participation rules.</p>
+      </details>
+
+      <details>
+        <summary>8. Does the picker support mobile?</summary>
+        <p>Yes, our giveaway picker works perfectly on mobile devices and tablets.</p>
+      </details>
+
+      <details>
+        <summary>9. What is the difference between a picker and a generator?</summary>
+        <p>A picker randomly chooses from existing entries, while a generator simulates the randomization wheel visually.</p>
+      </details>
+
+      <details>
+        <summary>10. How can I increase engagement during giveaways?</summary>
+        <p>Ask users to tag friends, share your post, and follow your account to maximize visibility and participation.</p>
+      </details>
+    </section>
+
+    <!-- SPONSOR SECTION: SINGLE BANNER -->
+    <section id="sponsors" class="sponsor-section">
+      <h2>Our Sponsors</h2>
+      <p>Giveaways supported by our partners</p>
+
+      <a href="https://www.famety.net/?utm_source=giveawaypicker&utm_medium=banner&utm_id=giveawaypicker" class="sponsor-banner" target="_blank" rel="sponsored">
+        <img
+          src="https://giveawaypicker.online/sponsored.png"
+          alt="Famety social media growth sponsor banner"
+          width="300"
+          height="100"
+          loading="lazy"
+        />
+      </a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> InstaGiveawayPicker, all rights reserved.</p>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="mailto:support@giveawaypicker.online">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
