@@ -1,14 +1,12 @@
 {
   "name": "giveaway-api",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "commonjs",
-  "engines": { "node": ">=18" },
+  "private": true,
   "scripts": {
-    "start": "node index.js"
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
   },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2"
+  "devDependencies": {
+    "wrangler": "^4.0.0"
   }
 }
