@@ -6,9 +6,7 @@
   <title>Free Instagram Giveaway Picker | Random Comment Winner Tool</title>
   <meta name="description" content="Run a free Instagram giveaway easily. Paste your post URL, set filters, and pick random winners instantly, no login, no app required." />
   <link rel="canonical" href="https://giveawaypicker.online/" />
-  <link rel="stylesheet" href="style.css" />
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRVPBJJB39"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,10 +14,46 @@
     gtag('js', new Date());
     gtag('config', 'G-RRVPBJJB39');
   </script>
+
+  <style>
+    body { margin:0; font-family:"Inter",system-ui,sans-serif; background:#fff; color:#333; }
+    .site-header { display:flex; justify-content:space-between; align-items:center; padding:14px 40px; background:linear-gradient(90deg,#a333ff,#f77737); color:#fff; }
+    .logo { font-weight:700; font-size:18px; }
+    .site-header nav a { color:#fff; text-decoration:none; margin-left:18px; font-weight:500; }
+    .site-header nav a:hover { opacity:0.8; }
+    main { max-width:800px; margin:40px auto; text-align:center; padding:0 20px; }
+    .title { font-size:2.2rem; font-weight:800; background:linear-gradient(90deg,#a333ff,#f77737); -webkit-background-clip:text; color:transparent; }
+    .subtitle { font-size:1rem; color:#555; margin-bottom:30px; }
+    .form-container { background:#fff; border:1px solid #eee; border-radius:12px; padding:30px; box-shadow:0 4px 10px rgba(0,0,0,0.04); text-align:left; }
+    label { font-weight:600; display:block; margin-bottom:8px; margin-top:16px; }
+    input { width:100%; padding:12px; border-radius:8px; border:1px solid #ccc; font-size:15px; margin-bottom:8px; box-sizing:border-box; }
+    .start-btn { background:linear-gradient(90deg,#a333ff,#f77737); color:#fff; font-weight:600; border:none; border-radius:8px; padding:14px; cursor:pointer; width:100%; margin-top:12px; font-size:15px; }
+    .start-btn:hover { opacity:0.9; }
+    .start-btn:disabled { opacity:0.6; cursor:not-allowed; }
+    .note { font-size:13px; color:#555; margin-top:8px; }
+    .show-btn { margin-top:18px; border:2px solid #007aff; background:#f7f7f7; color:#000; padding:12px; border-radius:8px; cursor:pointer; width:100%; font-size:15px; }
+    .progress-bar { margin-top:18px; background:#eee; border-radius:6px; overflow:hidden; height:10px; }
+    #progressFill { background:linear-gradient(90deg,#a333ff,#f77737); width:0%; height:100%; transition:width 0.3s; }
+    .winners { margin-top:20px; }
+    .winner-card { display:flex; align-items:center; gap:16px; padding:14px; border-bottom:1px solid #eee; }
+    .winner-avatar img { width:48px; height:48px; border-radius:50%; }
+    .winner-info p { margin:4px 0; color:#555; }
+    .winner-info a { color:#a333ff; font-size:14px; text-decoration:none; }
+    .site-footer { background:#121212; color:#ccc; text-align:center; padding:30px 16px; margin-top:60px; }
+    .footer-links a { color:#ccc; text-decoration:none; margin:0 10px; font-size:13px; }
+    .footer-links a:hover { color:#fff; }
+    #faq-section { margin-top:60px; text-align:left; }
+    #faq-section h2 { text-align:center; font-size:1.6rem; background:linear-gradient(90deg,#a333ff,#f77737); -webkit-background-clip:text; color:transparent; }
+    details { margin-bottom:12px; border:1px solid #eee; border-radius:8px; padding:10px 14px; }
+    summary { font-weight:600; cursor:pointer; }
+    summary:hover { color:#a333ff; }
+    .sponsor-section { margin-top:60px; text-align:center; }
+    .sponsor-section h2 { font-size:1.4rem; margin-bottom:6px; }
+    .sponsor-banner { display:inline-block; margin-top:12px; }
+  </style>
 </head>
 
 <body>
-  <!-- HEADER -->
   <header class="site-header">
     <div class="logo">🎁 InstaGiveawayPicker</div>
     <nav>
@@ -29,7 +63,6 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main>
     <h1 class="title">Free Instagram Giveaway Picker</h1>
     <p class="subtitle">
@@ -61,79 +94,59 @@
       <div id="winnersContainer" class="winners"></div>
     </div>
 
-    <!-- FAQ SECTION -->
     <section id="faq-section">
       <h2>Frequently Asked Questions About Instagram Giveaways</h2>
-
       <details open>
         <summary>1. What is an Instagram Giveaway Picker?</summary>
         <p>An Instagram Giveaway Picker randomly selects winners from post comments, perfect for fair and transparent giveaways.</p>
       </details>
-
       <details>
         <summary>2. How do I run a giveaway on Instagram?</summary>
         <p>Create a post with clear rules, ask users to comment, then paste your URL into our picker and choose random winners.</p>
       </details>
-
       <details>
         <summary>3. Is this Instagram Giveaway Picker free?</summary>
         <p>Yes. You can use our tool for free for up to 500 comments, no login or signup required.</p>
       </details>
-
       <details>
         <summary>4. How does the giveaway picker work?</summary>
         <p>The picker uses API powered comment data and selects random winners instantly and securely.</p>
       </details>
-
       <details>
         <summary>5. Can I use the giveaway picker without login?</summary>
         <p>Yes. Just paste a public Instagram post link. You never need to log in or share credentials.</p>
       </details>
-
       <details>
         <summary>6. How to pick multiple winners on Instagram?</summary>
         <p>Enter the number of comments you want in the "Number of Comments" field, and the picker will draw that many winners.</p>
       </details>
-
       <details>
         <summary>7. What are Instagram giveaway rules?</summary>
         <p>You must include a disclaimer that Instagram is not affiliated with your contest and clearly define participation rules.</p>
       </details>
-
       <details>
         <summary>8. Does the picker support mobile?</summary>
         <p>Yes, our giveaway picker works perfectly on mobile devices and tablets.</p>
       </details>
-
       <details>
         <summary>9. What is the difference between a picker and a generator?</summary>
         <p>A picker randomly chooses from existing entries, while a generator simulates the randomization wheel visually.</p>
       </details>
-
       <details>
         <summary>10. How can I increase engagement during giveaways?</summary>
         <p>Ask users to tag friends, share your post, and follow your account to maximize visibility and participation.</p>
       </details>
     </section>
 
-    <!-- SPONSOR SECTION: SINGLE BANNER -->
     <section id="sponsors" class="sponsor-section">
       <h2>Our Sponsors</h2>
       <p>Giveaways supported by our partners</p>
-
       <a href="https://www.famety.net/?utm_source=giveawaypicker&utm_medium=banner&utm_id=giveawaypicker" class="sponsor-banner" target="_blank" rel="sponsored">
-        <img
-          src="https://giveawaypicker.online/sponsored.png"
-          alt="Famety social media growth sponsor banner"
-          width="300"
-          height="100"
-          loading="lazy"
-        />
+        <img src="https://giveawaypicker.online/sponsored.png" alt="Famety social media growth sponsor banner" width="300" height="100" loading="lazy" />
       </a>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <p>© <span id="year"></span> InstaGiveawayPicker, all rights reserved.</p>
     <div class="footer-links">
@@ -143,6 +156,126 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const API_BASE = "https://giveawaypicker.online";
+    const startBtn = document.getElementById("startBtn");
+    const showWinnersBtn = document.getElementById("showWinnersBtn");
+    const postUrlInput = document.getElementById("postUrl");
+    const commentCountInput = document.getElementById("commentCount");
+    const winnersContainer = document.getElementById("winnersContainer");
+    const progressContainer = document.getElementById("progressContainer");
+    const progressFill = document.getElementById("progressFill");
+
+    const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+    function runProgressBar(seconds = 30) {
+      progressContainer.style.display = "block";
+      progressFill.style.width = "0%";
+      const total = seconds * 1000, step = 100;
+      let elapsed = 0;
+      return new Promise((resolve) => {
+        const t = setInterval(() => {
+          elapsed += step;
+          progressFill.style.width = Math.min((elapsed / total) * 100, 100) + "%";
+          if (elapsed >= total) { clearInterval(t); resolve(); }
+        }, step);
+      });
+    }
+
+    async function fetchJSON(url, options) {
+      const res = await fetch(url, options);
+      const text = await res.text();
+      const ct = res.headers.get("content-type") || "";
+      if (!ct.includes("application/json")) throw new Error("HTTP " + res.status + ". Backend did not return JSON.");
+      const json = JSON.parse(text);
+      if (!res.ok || json.success === false) throw new Error(json.error || "HTTP " + res.status);
+      return json;
+    }
+
+    startBtn.addEventListener("click", async () => {
+      const url = postUrlInput.value.trim();
+      const resultsLimit = Math.max(1, Math.min(500, Number(commentCountInput.value.trim()) || 5));
+      if (!url) return alert("Please enter a valid Instagram post URL.");
+
+      winnersContainer.innerHTML = "";
+      showWinnersBtn.style.display = "none";
+      startBtn.disabled = true;
+      startBtn.textContent = "Starting...";
+
+      try {
+        const data = await fetchJSON(API_BASE + "/start", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url, resultsLimit })
+        });
+        const runId = data.runId;
+        sessionStorage.setItem("apify_run_id", runId);
+
+        await runProgressBar(30);
+
+        const maxExtraWaitMs = 60000;
+        const pollIntervalMs = 2000;
+        const started = Date.now();
+        let datasetId = null;
+        let items = [];
+
+        while (Date.now() - started < maxExtraWaitMs) {
+          const sJson = await fetchJSON(API_BASE + "/status/" + runId, { method: "GET" });
+          datasetId = sJson.datasetId;
+          if (datasetId) {
+            const wJson = await fetchJSON(API_BASE + "/winners/" + datasetId + "?limit=" + resultsLimit, { method: "GET" });
+            items = Array.isArray(wJson.items) ? wJson.items : [];
+            if (items.length >= resultsLimit) break;
+            if (["SUCCEEDED","FAILED","ABORTED"].includes(sJson.status)) break;
+          }
+          await sleep(pollIntervalMs);
+        }
+
+        sessionStorage.setItem("apify_dataset_id", datasetId || "");
+        sessionStorage.setItem("apify_prefetched_items", JSON.stringify(items || []));
+        showWinnersBtn.style.display = "block";
+        alert("✅ Data ready. Found " + items.length + " entr" + (items.length === 1 ? "y" : "ies") + ". Click \"Show Winners\".");
+      } catch (err) {
+        console.error(err);
+        alert("❌ " + err.message);
+      } finally {
+        startBtn.disabled = false;
+        startBtn.textContent = "Start Giveaway Picker";
+        progressFill.style.width = "100%";
+      }
+    });
+
+    showWinnersBtn.addEventListener("click", async () => {
+      const datasetId = sessionStorage.getItem("apify_dataset_id");
+      const resultsLimit = Math.max(1, Math.min(500, Number(commentCountInput.value.trim()) || 5));
+      if (!datasetId) return alert("⚠️ No dataset found. Please start again.");
+
+      try {
+        let items = [];
+        const cached = sessionStorage.getItem("apify_prefetched_items");
+        if (cached) { try { items = JSON.parse(cached); } catch(e) {} }
+
+        if (!items || items.length === 0) {
+          const j = await fetchJSON(API_BASE + "/winners/" + datasetId + "?limit=" + resultsLimit, { method: "GET" });
+          items = j.items || [];
+        }
+
+        winnersContainer.innerHTML = items.map(function(item, i) {
+          return '<div class="winner-card">' +
+            '<div class="winner-avatar"><img src="' + (item.ownerProfilePicUrl || "") + '" alt="' + (item.ownerUsername || "user") + '"></div>' +
+            '<div class="winner-info">' +
+              '<strong>#' + (i+1) + ': ' + (item.ownerUsername || "Unknown") + '</strong>' +
+              '<p>' + (item.text || "") + '</p>' +
+              '<a href="' + (item.postUrl || "#") + '" target="_blank" rel="noopener">View Post ↗</a>' +
+            '</div></div>';
+        }).join("") || "<p>No results.</p>";
+      } catch (err) {
+        console.error(err);
+        winnersContainer.innerHTML = '<p style="color:red;">Failed to fetch winners. ' + err.message + '</p>';
+      }
+    });
+  </script>
 </body>
 </html>
